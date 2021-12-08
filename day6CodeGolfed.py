@@ -1,0 +1,2 @@
+def add_day(x, n): return x if n == 0 else add_day([x[1] if d == 9 else x[d+1] if d != 7 else x[d+1] + x[1] for d in range(10)], n-1)
+print(sum(add_day([0]+list(map(lambda tpl: tpl[0].count(tpl[1]), zip([[int(token) for token in input().split(',')]]*9,[i for i in range(9)]))), 256)[1:]))
